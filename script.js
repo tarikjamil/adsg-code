@@ -3,9 +3,16 @@ function runSplit() {
     types: "lines",
     lineClass: "loading-animation-split",
   });
+  textfade = new SplitType("[animation=split-fade]", {
+    types: "lines",
+    lineClass: "animation-split-fade",
+  });
 
   // Wrap each line in a div with class 'overflow-hidden'
   $(".loading-animation-split").each(function () {
+    $(this).wrap("<div class='overflow-hidden'></div>");
+  });
+  $(".animation-split-fade").each(function () {
     $(this).wrap("<div class='overflow-hidden'></div>");
   });
 }
@@ -18,6 +25,7 @@ window.addEventListener("resize", function () {
   if (windowWidth !== $(window).innerWidth()) {
     windowWidth = $(window).innerWidth();
     text.revert();
+    textfade.revert();
     runSplit();
   }
 });
@@ -105,5 +113,31 @@ gsap.to(".section.is--hero", {
     scrub: true,
     markers: true,
   },
-  scale: 0.6,
+  scale: 0.8,
+});
+
+gsap.to("[animation=split-fade]", {
+  scrollTrigger: {
+    trigger: $(this),
+    target: $(this).find(".animation-split-fade"),
+    start: "top center",
+  },
+  y: "100%",
+  opacity: "0",
+  stagger: { each: 0.1, from: "start" },
+  ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+  duration: 0.6,
+});
+
+// navbar color
+$(document).ready(function () {
+  var scrollTop = 0;
+  $(window).scroll(function () {
+    scrollTop = $(window).scrollTop();
+    if (scrollTop >= 50) {
+      $(".navbar").addClass("is--scrolled");
+    } else if (scrollTop < 50) {
+      $(".navbar").removeClass("is--scrolled");
+    }
+  });
 });
