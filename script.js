@@ -101,7 +101,7 @@ gsap.to(".section.is--hero", {
   scrollTrigger: {
     trigger: ".section.is--hero",
     start: "top top",
-    end: "top +=top",
+    end: "top +=100vh",
     scrub: true,
     markers: true,
   },
