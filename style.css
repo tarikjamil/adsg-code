@@ -5,3 +5,7 @@
 .overflow-hidden {
   overflow: hidden;
 }
+
+.loading-animation-split {
+  line-height: 1.2;
+}
