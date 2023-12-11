@@ -3,9 +3,8 @@ let text;
 // Split the text up
 function runSplit() {
   text = new SplitType("[animation=loading-split]", {
-    types: "lines, words",
-    lineClass: "overflow-hidden",
-    wordClass: "loading-animation-split",
+    types: "lines",
+    lineClass: "loading-animation-split",
   });
 }
 
