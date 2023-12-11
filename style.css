@@ -10,6 +10,10 @@
   margin-bottom: -0.15em;
 }
 
-.loading-animation-split {
+h1 .loading-animation-split {
   line-height: 1.2;
+}
+
+p .loading-animation-split {
+  line-height: 1.5;
 }
