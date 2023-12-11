@@ -116,19 +116,6 @@ gsap.to(".section.is--hero", {
   scale: 0.8,
 });
 
-gsap.to("[animation=split-fade]", {
-  scrollTrigger: {
-    trigger: $(this),
-    target: $(this).find(".animation-split-fade"),
-    start: "top center",
-  },
-  y: "100%",
-  opacity: "0",
-  stagger: { each: 0.1, from: "start" },
-  ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
-  duration: 0.6,
-});
-
 // navbar color
 $(document).ready(function () {
   var scrollTop = 0;
