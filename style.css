@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.overflow-hidden:nth-child(n + 1) {
+  margin-bottom: -0.15em;
+}
+
 .loading-animation-split {
   line-height: 1.2;
 }
