@@ -1,26 +1,3 @@
-// split type
-let text;
-// Split the text up
-function runSplit() {
-  text = new SplitType("[animation=loading-split]", {
-    types: "lines, words",
-    lineClass: "overflow-hidden",
-    wordClass: "loading-animation-split",
-  });
-}
-
-runSplit();
-
-// Update on window resize
-let windowWidth = $(window).innerWidth();
-window.addEventListener("resize", function () {
-  if (windowWidth !== $(window).innerWidth()) {
-    windowWidth = $(window).innerWidth();
-    text.revert();
-    runSplit();
-  }
-});
-
 gsap.registerPlugin(ScrollTrigger);
 
 // On Page Load
