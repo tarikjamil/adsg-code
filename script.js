@@ -40,7 +40,7 @@ function pageLoad() {
   tl.from(
     ".loading-animation-split",
     {
-      y: "20rem",
+      y: "100%",
       opacity: "0",
       stagger: { each: 0.1, from: "start" },
       ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
