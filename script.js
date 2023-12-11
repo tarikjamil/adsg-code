@@ -95,3 +95,14 @@ updateScrollingSpeed();
 
 // Update on window resize
 window.addEventListener("resize", updateScrollingSpeed);
+
+// hero animation on scroll
+gsap.to(".section.is--hero", {
+  scrollTrigger: {
+    trigger: ".section.is--hero",
+    start: "top top",
+    end: "top +=top",
+    scrub: true,
+  },
+  scale: 0.6,
+});
