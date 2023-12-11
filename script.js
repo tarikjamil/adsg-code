@@ -1,10 +1,12 @@
-// split type
-let text;
-// Split the text up
 function runSplit() {
   text = new SplitType("[animation=loading-split]", {
     types: "lines",
     lineClass: "loading-animation-split",
+  });
+
+  // Wrap each line in a div with class 'overflow-hidden'
+  $(".loading-animation-split").each(function () {
+    $(this).wrap("<div class='overflow-hidden'></div>");
   });
 }
 
