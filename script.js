@@ -103,6 +103,7 @@ gsap.to(".section.is--hero", {
     start: "top top",
     end: "top +=top",
     scrub: true,
+    markers: true,
   },
   scale: 0.6,
 });
