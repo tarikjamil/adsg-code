@@ -131,36 +131,6 @@ gsap.to(".section.is--hero", {
   scale: 0.8,
 });
 
-// navbar animation on scroll
-let lastScrollTop = 0;
-
-window.addEventListener(
-  "scroll",
-  function () {
-    let currentScroll =
-      window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-      // Scrolling down
-      gsap.to(".navbar", {
-        y: "-120rem",
-        ease: "smooth",
-        duration: 0.5,
-      });
-    } else {
-      // Scrolling up
-      gsap.to(".navbar", {
-        y: "0rem",
-        ease: "smooth",
-        duration: 0.5,
-      });
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-  },
-  false
-);
-
 // navbar is--scrolling animation
 ScrollTrigger.create({
   trigger: ".navbar",
