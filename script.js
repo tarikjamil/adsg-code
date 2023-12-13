@@ -134,7 +134,7 @@ document.querySelectorAll("[animation=split-fade]").forEach((element) => {
       toggleActions: "play none none reset", // Resets the animation when the element leaves the viewport
     },
     opacity: 0,
-    y: "20rem", // translateY
+    y: "100%", // translateY
     duration: 0.6, // Duration of the animation
     ease: "smooth", // Custom easing function
   });
