@@ -34,6 +34,11 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollSmoother);
 
+ScrollSmoother.create({
+  smooth: 1,
+  effects: true,
+});
+
 CustomEase.create("smooth", "M0,0 C0.38,0.005 0.215,1 1,1");
 
 // On Page Load
