@@ -137,6 +137,11 @@ document.querySelectorAll("[animation=split-fade]").forEach((element) => {
     y: "100%", // translateY
     duration: 0.6, // Duration of the animation
     ease: "smooth", // Custom easing function
+    stagger: {
+      amount: 0.3, // Total time for the stagger (in seconds)
+      from: "start", // Start staggering from the first element
+      each: 0.1, // Time between each element's animation start (in seconds)
+    },
   });
 });
 
