@@ -133,13 +133,13 @@ ScrollTrigger.create({
   onEnter: () =>
     gsap.to(".navbar", {
       backgroundColor: "var(--light-blue)",
-      ease: "smooth",
+      ease: "power1.out",
       duration: 0.6,
     }),
   onLeaveBack: () =>
     gsap.to(".navbar", {
       backgroundColor: "",
-      ease: "smooth",
+      ease: "power1.out",
       duration: 0.6,
     }), // Assuming the original color is the default
   toggleActions: "play none none reverse",
