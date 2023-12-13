@@ -160,7 +160,6 @@ $(document).ready(function () {
   });
 });
 
-// navbar menu
 let isMenuOpen = false; // Track if the menu is open
 
 document.querySelector(".menu--trigger").addEventListener("click", function () {
@@ -180,49 +179,55 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
     // Add animations to the timeline for opening
     tl.to(
       ".navbar--menu",
-      { top: "0rem", height: "100vh", duration: 0.6, ease: "smooth" },
+      { top: "0rem", height: "100vh", duration: 0.6, ease: "power1.out" },
       0
     )
       .to(
         ".navbar--menu-logo",
-        { bottom: "0rem", duration: 0.6, ease: "smooth" },
+        { bottom: "0rem", duration: 0.6, ease: "power1.out" },
         0
       )
       .to(
         ".menu--trigger-icon-toopen",
-        { right: "40rem", opacity: "0", duration: 0.6, ease: "smooth" },
+        { right: "40rem", opacity: "0", duration: 0.6, ease: "power1.out" },
         0
       )
       .to(
         ".menu--trigger-icon-toclose",
-        { right: "0rem", opacity: "1", duration: 0.6, ease: "smooth" },
+        { right: "0rem", opacity: "1", duration: 0.6, ease: "power1.out" },
         0
       );
+
+    // Disable scrolling
+    document.body.style.overflow = "hidden";
 
     isMenuOpen = true;
   } else {
     // Reverse the animations for closing
     tl.to(
       ".navbar--menu",
-      { top: "-50rem", height: "0vh", duration: 0.6, ease: "smooth" },
+      { top: "-50rem", height: "0vh", duration: 0.6, ease: "power1.out" },
       0
     )
       .to(
         ".navbar--menu-logo",
-        { bottom: "50rem", duration: 0.6, ease: "smooth" },
+        { bottom: "50rem", duration: 0.6, ease: "power1.out" },
         0
       )
       .to(
         ".menu--trigger-icon-toopen",
-        { right: "0rem", opacity: "1", duration: 0.6, ease: "smooth" },
+        { right: "0rem", opacity: "1", duration: 0.6, ease: "power1.out" },
         0
       )
       .to(
         ".menu--trigger-icon-toclose",
-        { right: "-40rem", opacity: "0", duration: 0.6, ease: "smooth" },
+        { right: "-40rem", opacity: "0", duration: 0.6, ease: "power1.out" },
         0
       )
-      .then(() => gsap.set(".navbar--menu", { display: "none" })); // Hide the menu after animation
+      .then(() => {
+        gsap.set(".navbar--menu", { display: "none" }); // Hide the menu after animation
+        document.body.style.overflow = ""; // Enable scrolling
+      });
 
     isMenuOpen = false;
   }
