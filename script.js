@@ -129,7 +129,7 @@ gsap.to(".section.is--hero", {
 ScrollTrigger.create({
   trigger: ".navbar",
   start: "top+=200",
-  end: "bottom bottom",
+  end: "top+=200",
   onEnter: () =>
     gsap.to(".navbar", {
       backgroundColor: "var(--light-blue)",
