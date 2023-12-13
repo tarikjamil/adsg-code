@@ -146,15 +146,22 @@ window.addEventListener(
   false
 );
 
-// navbar color
-$(document).ready(function () {
-  var scrollTop = 0;
-  $(window).scroll(function () {
-    scrollTop = $(window).scrollTop();
-    if (scrollTop >= 200) {
-      $(".navbar").addClass("is--scrolled");
-    } else if (scrollTop < 200) {
-      $(".navbar").removeClass("is--scrolled");
-    }
-  });
+// navbar is--scrolling animation
+ScrollTrigger.create({
+  trigger: ".navbar",
+  start: "top+=200",
+  end: "bottom bottom",
+  onEnter: () =>
+    gsap.to(".navbar", {
+      backgroundColor: "var(--light-blue)",
+      ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+      duration: 0.3,
+    }),
+  onLeaveBack: () =>
+    gsap.to(".navbar", {
+      backgroundColor: "",
+      ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+      duration: 0.3,
+    }), // Assuming the original color is the default
+  toggleActions: "play none none reverse",
 });
