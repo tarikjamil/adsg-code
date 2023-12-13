@@ -125,6 +125,20 @@ gsap.to(".section.is--hero", {
   scale: 0.8,
 });
 
+document.querySelectorAll("[animation=split-fade]").forEach((element) => {
+  gsap.from(element, {
+    scrollTrigger: {
+      trigger: $(this).find(".animation-split-fade"),
+      start: "top bottom-=200", // Adjust as needed
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    y: "-20rem", // translateY
+    duration: 1.5, // Duration of the animation
+    ease: "smooth", // Easing function
+  });
+});
+
 // navbar is--scrolling animation
 ScrollTrigger.create({
   trigger: ".navbar",
