@@ -150,6 +150,6 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
   gsap.fromTo(
     ".navbar--menu",
     { height: 0 },
-    { height: "100vh", duration: 0.6, ease: "smooth" }
+    { height: "100svh", duration: 0.6, ease: "smooth" }
   );
 });
