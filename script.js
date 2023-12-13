@@ -32,12 +32,28 @@ window.addEventListener("resize", function () {
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase);
-gsap.registerPlugin(ScrollSmoother);
 
-ScrollSmoother.create({
-  smooth: 1,
-  effects: true,
-});
+function handleScrollSmoother() {
+  if (window.innerWidth >= 991) {
+    // Initialize ScrollSmoother
+    // Example: ScrollSmoother.create({...});
+    gsap.registerPlugin(ScrollSmoother);
+    ScrollSmoother.create({
+      smooth: 1,
+      effects: true,
+    });
+  } else {
+    // Disable ScrollSmoother
+    // This depends on the API of the library you're using. Some libraries might have a destroy() method.
+    // Example: if (scrollSmootherInstance) scrollSmootherInstance.destroy();
+  }
+}
+
+// Run on document ready
+document.addEventListener("DOMContentLoaded", handleScrollSmoother);
+
+// Run on window resize
+window.addEventListener("resize", handleScrollSmoother);
 
 CustomEase.create("smooth", "M0,0 C0.38,0.005 0.215,1 1,1");
 
