@@ -116,6 +116,28 @@ gsap.to(".section.is--hero", {
   scale: 0.8,
 });
 
+// navbar animation on scroll
+let lastScrollTop = 0;
+
+window.addEventListener(
+  "scroll",
+  function () {
+    let currentScroll =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down
+      gsap.to(".navbar", { y: "-120rem", duration: 0.5 });
+    } else {
+      // Scrolling up
+      gsap.to(".navbar", { y: "0rem", duration: 0.5 });
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  },
+  false
+);
+
 // navbar color
 $(document).ready(function () {
   var scrollTop = 0;
