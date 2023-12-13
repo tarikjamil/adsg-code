@@ -18,12 +18,6 @@ p .loading-animation-split {
   line-height: 1.5;
 }
 
-.navbar.is--scrolled {
-  background-color: var(--white);
-  color: var(--black);
-  border-color: var(--black);
-}
-
 .section.is--hero {
   min-height: calc(100vh - 80rem - 56rem);
 }
