@@ -2,6 +2,12 @@
   opacity: 0;
 }
 
+a {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.38, 0.005, 0.215, 1);
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -43,12 +49,6 @@ p .loading-animation-split {
   background-color: var(--white);
   color: var(--black);
   border-color: var(--black);
-}
-
-a {
-  transition-property: all;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.38, 0.005, 0.215, 1);
 }
 
 .section.is--hero {
