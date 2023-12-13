@@ -164,12 +164,16 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
 
   // Set initial styles
   gsap.set(".navbar--menu", { display: "flex", top: "-50rem", height: "0svh" });
-  gsap.set(".navbar--menu-logo", { top: "50rem" });
+  gsap.set(".navbar--menu-logo", { bottom: "50rem" });
 
   // Add animations to the timeline
   tl.to(
     ".navbar--menu",
     { top: "0rem", height: "100svh", duration: 0.6, ease: "smooth" },
     0
-  ).to(".navbar--menu-logo", { top: "0rem", duration: 1, ease: "smooth" }, 0);
+  ).to(
+    ".navbar--menu-logo",
+    { bottom: "0rem", duration: 1, ease: "smooth" },
+    0
+  );
 });
