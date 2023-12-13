@@ -29,3 +29,15 @@ p .loading-animation-split {
 .capability--item-link:hover .capability--img {
   opacity: 1;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll; /* Important to keep for scroll functionality */
+}
