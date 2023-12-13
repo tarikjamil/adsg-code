@@ -146,24 +146,17 @@ gsap.utils.toArray("[animation=split-fade]").forEach((container) => {
   });
 });
 
-// navbar is--scrolling animation
-ScrollTrigger.create({
-  trigger: ".navbar",
-  start: "top+=200",
-  end: "top+=200",
-  onEnter: () =>
-    gsap.to(".navbar", {
-      backgroundColor: "var(--light-blue)",
-      ease: "smooth",
-      duration: 0.6,
-    }),
-  onLeaveBack: () =>
-    gsap.to(".navbar", {
-      backgroundColor: "",
-      ease: "smooth",
-      duration: 0.6,
-    }), // Assuming the original color is the default
-  toggleActions: "play none none reverse",
+// navbar color
+$(document).ready(function () {
+  var scrollTop = 0;
+  $(window).scroll(function () {
+    scrollTop = $(window).scrollTop();
+    if (scrollTop >= 50) {
+      $(".navbar--bg").addClass("is--scrolled");
+    } else if (scrollTop < 50) {
+      $(".navbar--bg").removeClass("is--scrolled");
+    }
+  });
 });
 
 // navbar menu
