@@ -137,7 +137,7 @@ gsap.utils.toArray("[animation=split-fade]").forEach((container) => {
       once: true, // Ensures the animation only triggers once
     },
     opacity: 0,
-    y: "20rem", // translateY
+    y: "100%", // translateY
     duration: 0.6, // Duration of the animation
     ease: "smooth", // Custom easing function
     stagger: {
