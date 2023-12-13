@@ -128,14 +128,15 @@ gsap.to(".section.is--hero", {
 document.querySelectorAll("[animation=split-fade]").forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
-      trigger: $(this).find(".animation-split-fade"),
-      start: "top bottom-=200", // Adjust as needed
-      toggleActions: "play none none none",
+      trigger: element.querySelector(".animation-split-fade"),
+      start: "top bottom", // Starts the animation when the top of the element hits the bottom of the viewport
+      end: "bottom top", // Ends the animation when the bottom of the element leaves the top of the viewport
+      toggleActions: "play none none reset", // Resets the animation when the element leaves the viewport
     },
     opacity: 0,
-    y: "-20rem", // translateY
-    duration: 1.5, // Duration of the animation
-    ease: "smooth", // Easing function
+    y: "20rem", // translateY
+    duration: 0.6, // Duration of the animation
+    ease: "smooth", // Custom easing function
   });
 });
 
