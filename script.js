@@ -173,7 +173,7 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
     0
   ).to(
     ".navbar--menu-logo",
-    { bottom: "0rem", duration: 1, ease: "smooth" },
+    { bottom: "0rem", duration: 0.6, ease: "smooth" },
     0
   );
 });
