@@ -146,10 +146,11 @@ ScrollTrigger.create({
 });
 
 document.querySelector(".menu--trigger").addEventListener("click", function () {
-  gsap.set(".navbar--menu", { display: "flex" }); // Set display to flex
-  gsap.fromTo(
-    ".navbar--menu",
-    { height: 0 },
-    { height: "100svh", duration: 0.6, ease: "smooth" }
-  );
+  gsap.set(".navbar--menu", { display: "flex", top: "-50rem" }); // Set initial styles
+  gsap.to(".navbar--menu", {
+    top: "0rem",
+    height: "100svh",
+    duration: 1,
+    ease: "smooth",
+  });
 });
