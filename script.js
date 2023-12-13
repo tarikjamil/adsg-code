@@ -139,7 +139,8 @@ gsap.utils.toArray("[animation=split-fade]").forEach((container) => {
     opacity: 0,
     y: "100%", // translateY
     duration: 0.6, // Duration of the animation
-    ease: "smooth", // Custom easing function
+    ease: "smooth",
+    delay: 0.3, // Custom easing function
     stagger: {
       amount: 0.1, // Total time for the stagger (in seconds)
     },
