@@ -127,10 +127,18 @@ window.addEventListener(
 
     if (currentScroll > lastScrollTop) {
       // Scrolling down
-      gsap.to(".navbar", { y: "-120rem", duration: 0.5 });
+      gsap.to(".navbar", {
+        y: "-120rem",
+        ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+        duration: 0.5,
+      });
     } else {
       // Scrolling up
-      gsap.to(".navbar", { y: "0rem", duration: 0.5 });
+      gsap.to(".navbar", {
+        y: "0rem",
+        ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+        duration: 0.5,
+      });
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
