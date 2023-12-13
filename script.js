@@ -131,7 +131,7 @@ document.querySelectorAll("[animation=split-fade]").forEach((element) => {
       trigger: element.querySelector(".animation-split-fade"),
       start: "top bottom", // Starts the animation when the top of the element hits the bottom of the viewport
       end: "bottom top", // Ends the animation when the bottom of the element leaves the top of the viewport
-      toggleActions: "play none none reset", // Resets the animation when the element leaves the viewport
+      toggleActions: "play none none none", // Resets the animation when the element leaves the viewport
     },
     opacity: 0,
     y: "100%", // translateY
