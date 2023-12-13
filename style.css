@@ -42,3 +42,7 @@ a {
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.38, 0.005, 0.215, 1);
 }
+
+.section.is--hero {
+  min-height: calc(100vh - 80rem - 56rem);
+}
