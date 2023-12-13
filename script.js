@@ -44,6 +44,7 @@ window.addEventListener("resize", function () {
 });
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CustomEase);
 
 CustomEase.create("smooth", "M0,0 C0.38,0.005 0.215,1 1,1");
 
