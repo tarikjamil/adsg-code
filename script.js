@@ -139,7 +139,7 @@ ScrollTrigger.create({
   onLeaveBack: () =>
     gsap.to(".navbar", {
       backgroundColor: "",
-      ease: "power1.out",
+      ease: "smooth",
       duration: 0.6,
     }), // Assuming the original color is the default
   toggleActions: "play none none reverse",
