@@ -141,7 +141,7 @@ gsap.utils.toArray("[animation=split-fade]").forEach((container) => {
     duration: 0.6, // Duration of the animation
     ease: "smooth", // Custom easing function
     stagger: {
-      amount: 0.3, // Total time for the stagger (in seconds)
+      amount: 0.1, // Total time for the stagger (in seconds)
     },
   });
 });
