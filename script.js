@@ -45,13 +45,15 @@ window.addEventListener("resize", function () {
 
 gsap.registerPlugin(ScrollTrigger);
 
+CustomEase.create("smooth", "M0,0 C0.38,0.005 0.215,1 1,1");
+
 // On Page Load
 function pageLoad() {
   let tl = gsap.timeline();
 
   tl.to(".main-wrapper", {
     opacity: 1,
-    ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+    ease: "smooth",
     duration: 0.6,
   });
 
@@ -65,7 +67,7 @@ function pageLoad() {
       y: "100%",
       opacity: "0",
       stagger: { each: 0.1, from: "start" },
-      ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+      ease: "smooth",
       duration: 0.6,
     },
     "loadingAnimationsStart"
@@ -76,7 +78,7 @@ function pageLoad() {
       y: "20rem",
       opacity: "0",
       stagger: { each: 0.1, from: "start" },
-      ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+      ease: "smooth",
       duration: 0.6,
     },
     "loadingAnimationsStart"
@@ -89,7 +91,7 @@ function pageLoad() {
       y: "-20rem",
       opacity: "0",
       stagger: { each: 0.1, from: "start" },
-      ease: "Quint.easeOut",
+      ease: "smooth",
       duration: 1,
     },
     "loadingAnimationsStart"
@@ -142,14 +144,14 @@ window.addEventListener(
       // Scrolling down
       gsap.to(".navbar", {
         y: "-120rem",
-        ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+        ease: "smooth",
         duration: 0.5,
       });
     } else {
       // Scrolling up
       gsap.to(".navbar", {
         y: "0rem",
-        ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+        ease: "smooth",
         duration: 0.5,
       });
     }
@@ -167,13 +169,13 @@ ScrollTrigger.create({
   onEnter: () =>
     gsap.to(".navbar", {
       backgroundColor: "var(--light-blue)",
-      ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+      ease: "smooth",
       duration: 0.3,
     }),
   onLeaveBack: () =>
     gsap.to(".navbar", {
       backgroundColor: "",
-      ease: CustomEase.create("custom", "M0,0 C0.38,0.005 0.215,1 1,1"),
+      ease: "smooth",
       duration: 0.3,
     }), // Assuming the original color is the default
   toggleActions: "play none none reverse",
