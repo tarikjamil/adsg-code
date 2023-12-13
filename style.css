@@ -32,11 +32,11 @@ p .loading-animation-split {
 
 /* Style for Chrome, Safari, and Opera */
 ::-webkit-scrollbar {
-  width: 0px; /* Width of the scrollbar */
+  width: 4px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Makes the track invisible */
+  background: var(--white); /* Makes the track invisible */
 }
 
 ::-webkit-scrollbar-thumb {
