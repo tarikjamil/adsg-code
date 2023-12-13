@@ -133,7 +133,7 @@ ScrollTrigger.create({
   onEnter: () =>
     gsap.to(".navbar", {
       backgroundColor: "var(--light-blue)",
-      ease: "power1.out",
+      ease: "smooth",
       duration: 0.6,
     }),
   onLeaveBack: () =>
@@ -163,11 +163,11 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
     // Add animations to the timeline for opening
     tl.to(
       ".navbar--menu",
-      { top: "0rem", height: "100vh", duration: 0.6, ease: "power1.out" },
+      { top: "0rem", height: "100vh", duration: 0.6, ease: "smooth" },
       0
     ).to(
       ".navbar--menu-logo",
-      { bottom: "0rem", duration: 0.6, ease: "power1.out" },
+      { bottom: "0rem", duration: 0.6, ease: "smooth" },
       0
     );
 
@@ -176,12 +176,12 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
     // Reverse the animations for closing
     tl.to(
       ".navbar--menu",
-      { top: "-50rem", height: "0vh", duration: 0.6, ease: "power1.out" },
+      { top: "-50rem", height: "0vh", duration: 0.6, ease: "smooth" },
       0
     )
       .to(
         ".navbar--menu-logo",
-        { bottom: "50rem", duration: 0.6, ease: "power1.out" },
+        { bottom: "50rem", duration: 0.6, ease: "smooth" },
         0
       )
       .then(() => gsap.set(".navbar--menu", { display: "none" })); // Hide the menu after animation
