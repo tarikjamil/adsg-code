@@ -154,7 +154,7 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
   gsap.to(".navbar--menu", {
     top: "0rem",
     height: "100svh",
-    duration: 1,
+    duration: 0.6,
     ease: "smooth",
   });
 });
