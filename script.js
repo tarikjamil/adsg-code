@@ -146,7 +146,11 @@ ScrollTrigger.create({
 });
 
 document.querySelector(".menu--trigger").addEventListener("click", function () {
-  gsap.set(".navbar--menu", { display: "flex", top: "-50rem" }); // Set initial styles
+  gsap.set(".navbar--menu", {
+    display: "flex",
+    top: "-50rem",
+    height: "0svh",
+  }); // Set initial styles
   gsap.to(".navbar--menu", {
     top: "0rem",
     height: "100svh",
