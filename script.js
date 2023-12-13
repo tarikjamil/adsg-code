@@ -121,9 +121,9 @@ $(document).ready(function () {
   var scrollTop = 0;
   $(window).scroll(function () {
     scrollTop = $(window).scrollTop();
-    if (scrollTop >= 50) {
+    if (scrollTop >= 200) {
       $(".navbar").addClass("is--scrolled");
-    } else if (scrollTop < 50) {
+    } else if (scrollTop < 200) {
       $(".navbar").removeClass("is--scrolled");
     }
   });
