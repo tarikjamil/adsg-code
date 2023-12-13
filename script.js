@@ -159,17 +159,30 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
       height: "0vh",
     });
     gsap.set(".navbar--menu-logo", { bottom: "50rem" });
+    gsap.set(".menu--trigger-icon-toopen", { right: "0rem", opacity: "1" });
+    gsap.set(".menu--trigger-icon-toclose", { right: "-40rem", opacity: "0" });
 
     // Add animations to the timeline for opening
     tl.to(
       ".navbar--menu",
       { top: "0rem", height: "100vh", duration: 0.6, ease: "smooth" },
       0
-    ).to(
-      ".navbar--menu-logo",
-      { bottom: "0rem", duration: 0.6, ease: "smooth" },
-      0
-    );
+    )
+      .to(
+        ".navbar--menu-logo",
+        { bottom: "0rem", duration: 0.6, ease: "smooth" },
+        0
+      )
+      .to(
+        ".menu--trigger-icon-toopen",
+        { right: "40rem", opacity: "0", duration: 0.6, ease: "smooth" },
+        0
+      )
+      .to(
+        ".menu--trigger-icon-toclose",
+        { right: "0rem", opacity: "1", duration: 0.6, ease: "smooth" },
+        0
+      );
 
     isMenuOpen = true;
   } else {
@@ -182,6 +195,16 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
       .to(
         ".navbar--menu-logo",
         { bottom: "50rem", duration: 0.6, ease: "smooth" },
+        0
+      )
+      .to(
+        ".menu--trigger-icon-toopen",
+        { right: "0rem", opacity: "1", duration: 0.6, ease: "smooth" },
+        0
+      )
+      .to(
+        ".menu--trigger-icon-toclose",
+        { right: "-40rem", opacity: "0", duration: 0.6, ease: "smooth" },
         0
       )
       .then(() => gsap.set(".navbar--menu", { display: "none" })); // Hide the menu after animation
