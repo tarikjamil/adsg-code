@@ -144,3 +144,12 @@ ScrollTrigger.create({
     }), // Assuming the original color is the default
   toggleActions: "play none none reverse",
 });
+
+document.querySelector(".menu--trigger").addEventListener("click", function () {
+  gsap.set(".navbar--menu", { display: "flex" }); // Set display to flex
+  gsap.fromTo(
+    ".navbar--menu",
+    { height: 0 },
+    { height: "100vh", duration: 1, ease: "power2.out" }
+  );
+});
