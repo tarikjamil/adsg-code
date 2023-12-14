@@ -10,9 +10,12 @@
   margin-bottom: -0.15em;
 }
 
-.loading-animation-split,
-.animation-split-fade {
+.loading-animation-split {
   line-height: 1.2;
+}
+
+.animation-split-fade {
+  line-height: 1.1;
 }
 
 h1 .loading-animation-split,
