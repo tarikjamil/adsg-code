@@ -30,15 +30,14 @@ window.addEventListener("resize", function () {
   }
 });
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(CustomEase);
+gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 function handleScrollSmoother() {
   if (window.innerWidth >= 991) {
     // Initialize ScrollSmoother
     // Example: ScrollSmoother.create({...});
     gsap.registerPlugin(ScrollSmoother);
-    ScrollSmoother.create({
+    const smoother = ScrollSmoother.create({
       smooth: 1,
       effects: true,
     });
