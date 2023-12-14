@@ -24,7 +24,8 @@ h1 .loading-animation-split,
 }
 
 p .loading-animation-split,
-p .animation-split-fade {
+p .animation-split-fade,
+blockquote .animation-split-fade {
   line-height: 1.5;
 }
 
