@@ -195,22 +195,22 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
     // Add animations to the timeline for opening
     tl.to(
       ".navbar--menu",
-      { top: "0rem", height: "100vh", duration: 0.6, ease: "power1.out" },
+      { top: "0rem", height: "100vh", duration: 0.6, ease: "smooth" },
       0
     )
       .to(
         ".navbar--menu-logo",
-        { bottom: "0rem", duration: 0.6, ease: "power1.out" },
+        { bottom: "0rem", duration: 0.6, ease: "smooth" },
         0
       )
       .to(
         ".menu--trigger-icon-toopen",
-        { right: "40rem", opacity: "0", duration: 0.6, ease: "power1.out" },
+        { right: "40rem", opacity: "0", duration: 0.6, ease: "smooth" },
         0
       )
       .to(
         ".menu--trigger-icon-toclose",
-        { right: "0rem", opacity: "1", duration: 0.6, ease: "power1.out" },
+        { right: "0rem", opacity: "1", duration: 0.6, ease: "smooth" },
         0
       );
 
@@ -222,22 +222,22 @@ document.querySelector(".menu--trigger").addEventListener("click", function () {
     // Reverse the animations for closing
     tl.to(
       ".navbar--menu",
-      { top: "-50rem", height: "0vh", duration: 0.6, ease: "power1.out" },
+      { top: "-50rem", height: "0vh", duration: 0.6, ease: "smooth" },
       0
     )
       .to(
         ".navbar--menu-logo",
-        { bottom: "50rem", duration: 0.6, ease: "power1.out" },
+        { bottom: "50rem", duration: 0.6, ease: "smooth" },
         0
       )
       .to(
         ".menu--trigger-icon-toopen",
-        { right: "0rem", opacity: "1", duration: 0.6, ease: "power1.out" },
+        { right: "0rem", opacity: "1", duration: 0.6, ease: "smooth" },
         0
       )
       .to(
         ".menu--trigger-icon-toclose",
-        { right: "-40rem", opacity: "0", duration: 0.6, ease: "power1.out" },
+        { right: "-40rem", opacity: "0", duration: 0.6, ease: "smooth" },
         0
       )
       .then(() => {
