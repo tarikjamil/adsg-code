@@ -42,6 +42,8 @@ function handleScrollSmoother() {
       smooth: 1,
       effects: true,
     });
+
+    smoother.effects(".img--absolute", { speed: "auto" });
   } else {
     // Disable ScrollSmoother
     // This depends on the API of the library you're using. Some libraries might have a destroy() method.
