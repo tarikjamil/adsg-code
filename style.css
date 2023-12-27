@@ -67,6 +67,10 @@ body {
   scrollbar-color: #888 transparent; /* thumb color and transparent track */
 }
 
+.w-richtext figure.w-richtext-align-fullwidth {
+  max-width: none !important;
+}
+
 .w-richtext figure.w-richtext-align-fullwidth div {
   width: 100% !important;
 }
