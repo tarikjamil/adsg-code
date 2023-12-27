@@ -7,7 +7,7 @@
 }
 
 .overflow-hidden:nth-child(n + 1) {
-  margin-bottom: -0.15em;
+  margin-bottom: -0.2em;
 }
 
 .loading-animation-split {
